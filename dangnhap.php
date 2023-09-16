@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<?php
+include("connect.php");
+?>
 <!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 <head>
   <meta charset="UTF-8">
@@ -80,9 +82,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="mt-5 text-muted text-center">
-              Bạn không có tài khoản ? <a href="dangky.php">Đăng ký</a>
             </div>
           </div>
         </div>

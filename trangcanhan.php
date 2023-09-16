@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+include("connect.php");
+?>
 
 <!-- profile.html  21 Nov 2019 03:49:30 GMT -->
 <head>
@@ -168,7 +170,7 @@
                 Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+              <a href="dangnhap.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                 Logout
               </a>
             </div>
@@ -185,7 +187,7 @@
           <ul class="sidebar-menu">
             <li class="menu-header">Main</li>
             <li class="dropdown">
-              <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+              <a href="index.php" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
@@ -535,22 +537,22 @@
                           <div class="col-md-3 col-6 b-r">
                             <strong>Tên đầy đủ</strong>
                             <br>
-                            <p class="text-muted">Trần Phương Ly</p>
+                            <p class="text-muted"><?php echo $_SESSION["lname"]?></p>
                           </div>
                           <div class="col-md-3 col-6 b-r">
                             <strong>Số điện thoại</strong>
                             <br>
-                            <p class="text-muted">(123) 456 7890</p>
+                            <p class="text-muted"><?php echo $_SESSION["sdt"]?></p>
                           </div>
                           <div class="col-md-3 col-6 b-r">
                             <strong>Email</strong>
                             <br>
-                            <p class="text-muted">phuongly@example.com</p>
+                            <p class="text-muted"><?php echo $_SESSION["email"]?></p>
                           </div>
                           <div class="col-md-3 col-6">
                             <strong>Địa chỉ</strong>
                             <br>
-                            <p class="text-muted">Hà Nội</p>
+                            <p class="text-muted"><?php echo $_SESSION["diachi"]?></p>
                           </div>
                         </div>
                         <p class="m-t-30">Trần Phương Ly, thường được biết đến với nghệ danh Phương Ly, là một nữ ca sĩ người Việt Nam. Cô bắt đầu nổi danh với vai trò là một nhân vật nổi tiếng trên mạng xã hội, sau đó hoạt động với tư cách là một nghệ sĩ âm nhạc và nhanh chóng nhận về những thành công lớn</p>
@@ -593,55 +595,36 @@
                           <div class="card-body">
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
-                                <label>Họ và tên đệm</label>
-                                <input type="text" class="form-control" value="John">
+                                <label>Họ và tên</label>
+                                <input type="text" class="form-control" value="<?php echo $_SESSION["lname"]?>">
                                 <div class="invalid-feedback">
-                                  Vui lòng nhập họ và tên đệm
+                                  Vui lòng nhập họ và tên
                                 </div>
                               </div>
                               <div class="form-group col-md-6 col-12">
-                                <label>Tên</label>
-                                <input type="text" class="form-control" value="Deo">
+                                <label>Địa chỉ</label>
+                                <input type="text" class="form-control" value="<?php echo $_SESSION["diachi"]?>">
                                 <div class="invalid-feedback">
-                                  Vui lòng nhập tên của bạn
+                                  Vui lòng nhập địa chỉ
                                 </div>
                               </div>
                             </div>
                             <div class="row">
                               <div class="form-group col-md-7 col-12">
                                 <label>Email</label>
-                                <input type="email" class="form-control" value="test@example.com">
+                                <input  type="email" disabled class="form-control" value="<?php echo $_SESSION["email"]?>">
                                 <div class="invalid-feedback">
                                   Vui lòng nhập địa chỉ email
                                 </div>
                               </div>
                               <div class="form-group col-md-5 col-12">
                                 <label>Số điện thoại</label>
-                                <input type="tel" class="form-control" value="">
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="form-group col-12">
-                                <label>Tiểu sử</label>
-                                <textarea
-                                  class="form-control summernote-simple">Anh sẽ thấy ngoài kia đấy bao cô gái như em
-                                  Cũng cần tình yêu, cần được hiểu, cần một chút nuông chiều</textarea>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="form-group mb-0 col-12">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" name="remember" class="custom-control-input" id="newsletter">
-                                  <label class="custom-control-label" for="newsletter">Đăng ký để nhận thông tin </label>
-                                  <div class="text-muted form-text">
-                                    Bạn sẽ nhận được thông tin mới về sản phẩm, ưu đãi và khuyến mãi
-                                  </div>
-                                </div>
+                                <input type="tel" class="form-control" value="<?php echo $_SESSION["sdt"]?>">
                               </div>
                             </div>
                           </div>
                           <div class="card-footer text-right">
-                            <button class="btn btn-primary">Lưu thay đổi</button>
+                            <button class="btn btn-primary" name="mc">Lưu thay đổi</button>
                           </div>
                         </form>
                       </div>

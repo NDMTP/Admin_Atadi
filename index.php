@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+include("connect.php");
+?>
 
 <!-- index.html  21 Nov 2019 03:44:50 GMT -->
 <head>
@@ -153,14 +155,17 @@
               </div>
             </div>
           </li>
+          <div>
+            
+          </div>
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
-              <div class="dropdown-title">Hello Phương Ly</div>
-              <a href="trangcanhan.html" class="dropdown-item has-icon"> <i class="far
+              <div class="dropdown-title">Hello <?php echo  $_SESSION["lname"] ?></div>
+              <a href="trangcanhan.php" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Trang cá nhân
-              </a> <a href="doimatkhau.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
+              </a> <a href="doimatkhau.php" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
                 Đổi mật khẩu
               <div class="dropdown-divider"></div>
               <a href="dangnhap.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
@@ -180,7 +185,7 @@
           <ul class="sidebar-menu">
             <li class="menu-header">Main</li>
             <li class="dropdown active">
-              <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Nội dung chính</span></a>
+              <a href="index.php" class="nav-link"><i data-feather="monitor"></i><span>Nội dung chính</span></a>
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
