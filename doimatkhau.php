@@ -30,7 +30,7 @@
               </div>
               <div class="card-body">
                 
-                <form method="POST">
+                <form method="POST" action="updatematkhau.php">
                   <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
@@ -38,7 +38,7 @@
                   <div class="form-group">
                     <label for="password">Mật khẩu cũ</label>
                     <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator"
-                      name="password" tabindex="2" required>
+                      name="psw2" tabindex="2" required>
                     <div id="pwindicator" class="pwindicator">
                       <div class="bar"></div>
                       <div class="label"></div>
@@ -47,7 +47,7 @@
                   <div class="form-group">
                     <label for="password">Mật khẩu mới</label>
                     <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator"
-                      name="password" tabindex="2" required>
+                      name="psw" tabindex="2" required>
                     <div id="pwindicator" class="pwindicator">
                       <div class="bar"></div>
                       <div class="label"></div>
@@ -55,11 +55,11 @@
                   </div>
                   <div class="form-group">
                     <label for="password-confirm">Xác nhận mật khẩu mới</label>
-                    <input id="password-confirm" type="password" class="form-control" name="confirm-password"
+                    <input id="password-confirm" type="password" class="form-control" name="psw1"
                       tabindex="2" required>
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" name="rsmk">
                       Đổi mật khẩu
                     </button>
                   </div>
