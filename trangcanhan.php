@@ -398,7 +398,7 @@ include("connect.php");
                       <img alt="image" src="assets/img/users/PhuongLy.jpg" class="rounded-circle author-box-picture">
                       <div class="clearfix"></div>
                       <div class="author-box-name">
-                        <a href="#">Phương Ly</a>
+                        <a href="#"><?php echo $_SESSION["lname"]?></a>
                       </div>
                       <div class="author-box-job">Ca sĩ</div>
                     </div>
@@ -429,94 +429,7 @@ include("connect.php");
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Thông tin cá nhân</h4>
-                  </div>
-                  <div class="card-body">
-                    <div class="py-4">
-                      <p class="clearfix">
-                        <span class="float-left">
-                          Sinh nhật
-                        </span>
-                        <span class="float-right text-muted">
-                          28-10-1990
-                        </span>
-                      </p>
-                      <p class="clearfix">
-                        <span class="float-left">
-                          Số điện thoại
-                        </span>
-                        <span class="float-right text-muted">
-                          (+84)123456789
-                        </span>
-                      </p>
-                      <p class="clearfix">
-                        <span class="float-left">
-                          email
-                        </span>
-                        <span class="float-right text-muted">
-                          phuongly@example.com
-                        </span>
-                      </p>
-                      <p class="clearfix">
-                        <span class="float-left">
-                          Facebook
-                        </span>
-                        <span class="float-right text-muted">
-                          <a href="#">PhuongLy</a>
-                        </span>
-                      </p>
-                      <p class="clearfix">
-                        <span class="float-left">
-                          Twitter
-                        </span>
-                        <span class="float-right text-muted">
-                          <a href="#">@phuongly</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Kĩ năng</h4>
-                  </div>
-                  <div class="card-body">
-                    <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder">
-                      <li class="media">
-                        <div class="media-body">
-                          <div class="media-title">Hát</div>
-                        </div>
-                        <div class="media-progressbar p-t-10">
-                          <div class="progress" data-height="6">
-                            <div class="progress-bar bg-primary" data-width="70%"></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="media">
-                        <div class="media-body">
-                          <div class="media-title">Xinh</div>
-                        </div>
-                        <div class="media-progressbar p-t-10">
-                          <div class="progress" data-height="6">
-                            <div class="progress-bar bg-warning" data-width="80%"></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="media">
-                        <div class="media-body">
-                          <div class="media-title">Dễ Thương</div>
-                        </div>
-                        <div class="media-progressbar p-t-10">
-                          <div class="progress" data-height="6">
-                            <div class="progress-bar bg-green" data-width="48%"></div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                
               </div>
               <div class="col-12 col-md-12 col-lg-8">
                 <div class="card">
@@ -555,40 +468,9 @@ include("connect.php");
                             <p class="text-muted"><?php echo $_SESSION["diachi"]?></p>
                           </div>
                         </div>
-                        <p class="m-t-30">Trần Phương Ly, thường được biết đến với nghệ danh Phương Ly, là một nữ ca sĩ người Việt Nam. Cô bắt đầu nổi danh với vai trò là một nhân vật nổi tiếng trên mạng xã hội, sau đó hoạt động với tư cách là một nghệ sĩ âm nhạc và nhanh chóng nhận về những thành công lớn</p>
-                        <p>2017–nay: Thành công vượt bậc cùng các sản phẩm âm nhạc </p>
-                        <p>Vào ngày 28 tháng 10 năm 2017, Phương Ly phát hành bài hát "Mặt trời của em" hợp tác cùng rapper người Việt Nam JustaTee. Bài hát nhanh chóng trở nên nổi tiếng và đứng đầu bảng xếp hạng hàng tuần trên các bảng xếp hạng của các nền tảng phát nhạc Zing MP3 và Nhaccuatui.[5] Video âm nhạc của bài hát hiện đã đạt hơn 100 triệu lượt xem trên YouTube, trở thành một trong những video Việt Nam được xem nhiều nhất mọi thời đại. Bài hát nhận về nhiều tán dương của giới chuyên môn, VietnamMoi đã gọi đây là sản phẩm âm nhạc "nổi bật của năm, giúp Phương Ly thoát mác hot girl đi hát"
-                          Phương Ly tiếp tục hợp tác với rapper JustaTee trong bài hát "Thằng điên".[7] Ngay sau khi phát hành, bài hát đã đạt được nhiều thành công đáng kể tại Việt Nam, đứng đầu nhiều bảng xếp hạng trên các trang nghe nhạc nội địa.[8][9] Tại giải thưởng âm nhạc Zing Music Award năm 2018, "Thằng điên" đã nhận về một đề cử cho hạng mục Bài hát của năm.[10] Video âm nhạc của bài hát cũng đạt hơn 170 triệu lượt xem trên YouTube, trở thành một trong những video Việt Nam được xem nhiều nhất mọi thời đại</p>
-                        <div class="section-title">Education</div>
-                        <ul>
-                          <li>B.A.,Gujarat University, Ahmedabad,India.</li>
-                          <li>M.A.,Gujarat University, Ahmedabad, India.</li>
-                          <li>P.H.D., Shaurashtra University, Rajkot</li>
-                        </ul>
-                        <div class="section-title">Experience</div>
-                        <ul>
-                          <li>One year experience as Jr. Professor from April-2009 to march-2010
-                            at B.
-                            J. Arts College, Ahmedabad.</li>
-                          <li>Three year experience as Jr. Professor at V.S. Arts &amp; Commerse
-                            Collage
-                            from April - 2008 to April - 2011.</li>
-                          <li>Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry.
-                          </li>
-                          <li>Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry.
-                          </li>
-                          <li>Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry.
-                          </li>
-                          <li>Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry.
-                          </li>
-                        </ul>
                       </div>
                       <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
-                        <form method="post" class="needs-validation">
+                        <form method="post" class="needs-validation" action="updateadmin.php">
                           <div class="card-header">
                             <h4>Chỉnh sửa thông tin cá nhân</h4>
                           </div>
@@ -596,14 +478,14 @@ include("connect.php");
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
                                 <label>Họ và tên</label>
-                                <input type="text" class="form-control" value="<?php echo $_SESSION["lname"]?>">
+                                <input type="text" class="form-control" value="<?php echo $_SESSION["hoten"]?>" name="hoten">
                                 <div class="invalid-feedback">
                                   Vui lòng nhập họ và tên
                                 </div>
                               </div>
                               <div class="form-group col-md-6 col-12">
                                 <label>Địa chỉ</label>
-                                <input type="text" class="form-control" value="<?php echo $_SESSION["diachi"]?>">
+                                <input type="text" class="form-control" value="<?php echo $_SESSION["diachi"]?>" name="diachi">
                                 <div class="invalid-feedback">
                                   Vui lòng nhập địa chỉ
                                 </div>
@@ -611,15 +493,13 @@ include("connect.php");
                             </div>
                             <div class="row">
                               <div class="form-group col-md-7 col-12">
-                                <label>Email</label>
-                                <input  type="email" disabled class="form-control" value="<?php echo $_SESSION["email"]?>">
-                                <div class="invalid-feedback">
-                                  Vui lòng nhập địa chỉ email
-                                </div>
+                                <label>Email:<?php echo $_SESSION["email"]?></label>
+                               
+
                               </div>
                               <div class="form-group col-md-5 col-12">
                                 <label>Số điện thoại</label>
-                                <input type="tel" class="form-control" value="<?php echo $_SESSION["sdt"]?>">
+                                <input type="tel" class="form-control" value="<?php echo $_SESSION["sdt"]?>" name="sdt">
                               </div>
                             </div>
                           </div>
