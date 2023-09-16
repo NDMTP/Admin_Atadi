@@ -492,10 +492,12 @@ include("connect.php");
                               </div>
                             </div>
                             <div class="row">
-                              <div class="form-group col-md-7 col-12">
-                                <label>Email:<?php echo $_SESSION["email"]?></label>
-                               
-
+                            <div class="form-group col-md-7 col-12">
+                                <label>Email</label>
+                                <input  type="email" disabled class="form-control" value="<?php echo $_SESSION["email"]?>">
+                                <div class="invalid-feedback">
+                                  Vui lòng nhập địa chỉ email
+                                </div>
                               </div>
                               <div class="form-group col-md-5 col-12">
                                 <label>Số điện thoại</label>
