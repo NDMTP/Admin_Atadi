@@ -1,15 +1,7 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "qlbanmicay";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('connect.php');
 
-session_start();
 if(isset($_POST["mc"])){
     $sql=" UPDATE nguoidung SET MATKHAU='".$_POST["matkhau"]."',DIACHI='".$_POST["diachi"]."',
     TEN='".$_POST["ten"]."',SDT='".$_POST["sdt"]."',PHANQUYEN='".$_POST["phanquyen"]."' WHERE email='".$_SESSION["email"]."'

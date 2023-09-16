@@ -1,15 +1,7 @@
 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "qlbanmicay";
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                  die("Connection failed: " . $conn->connect_error);
-                }
+                include('connect.php');
                
                 if(isset($_POST["mc"])){
-                    session_start();
                   $sql1="select*from nguoidung where email='".$_SESSION["email"]."'";
                   
                   $result1 = $conn->query($sql1);
