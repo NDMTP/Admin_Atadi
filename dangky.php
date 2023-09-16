@@ -76,7 +76,7 @@
                 </form>
               </div>
               <div class="mb-4 text-muted text-center">
-                Đã đăng ký? <a href="dangnhap.html">Đăng nhập</a>
+                Đã đăng ký? <a href="dangnhap.php">Đăng nhập</a>
               </div>
             </div>
           </div>

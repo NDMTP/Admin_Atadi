@@ -30,7 +30,7 @@
                 <h4>Đăng nhập</h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+                <form method="POST" action="dangnhapphp.php" class="needs-validation" novalidate="">
                   <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
@@ -59,7 +59,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" name="mc1">
                       Đăng nhập
                     </button>
                   </div>
@@ -82,7 +82,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Bạn không có tài khoản ? <a href="dangky.html">Đăng ký</a>
+              Bạn không có tài khoản ? <a href="dangky.php">Đăng ký</a>
             </div>
           </div>
         </div>

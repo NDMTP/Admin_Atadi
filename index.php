@@ -163,7 +163,7 @@
               </a> <a href="doimatkhau.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
                 Đổi mật khẩu
               <div class="dropdown-divider"></div>
-              <a href="dangnhap.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+              <a href="dangnhap.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                 Đăng xuất
               </a>
             </div>
