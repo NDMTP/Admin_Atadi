@@ -181,15 +181,6 @@
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
-                        <thead>
-                            <tr>
-                                <th>Email</th>
-                                <th>Tên</th>
-                                <th>Địa chỉ</th>
-                                <th>Số điện thoại</th>
-                                <th>Số lần mua hàng</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <?php
                             $servername = "localhost";
@@ -212,9 +203,19 @@
                                     GROUP BY nguoidung.email, nguoidung.ten, nguoidung.diachi, nguoidung.sdt";
                             $result = $conn->query($sql);
 
-                            $result = $conn->query($sql);
-
                             if ($result->num_rows > 0) {
+                                echo '<table class="table table-striped table-hover" id="tableExport" style="width:100%;">';
+                                echo '<thead>';
+                                echo '<tr>';
+                                echo '<th>Email</th>';
+                                echo '<th>Tên</th>';
+                                echo '<th>Địa chỉ</th>';
+                                echo '<th>Số điện thoại</th>';
+                                echo '<th>Số lần mua hàng</th>';
+                                echo '</tr>';
+                                echo '</thead>';
+                                echo '<tbody>';
+                                
                                 while ($row = $result->fetch_assoc()) {
                                     echo "<tr>
                                             <td>" . $row["email"] . "</td>
@@ -224,6 +225,12 @@
                                             <td>" . $row["solanmuahang"] . "</td>
                                           </tr>";
                                 }
+
+                                echo '</tbody>';
+                                echo '</table>';
+                                
+                                $totalEmployees = $result->num_rows; // Đếm tổng số nhân viên
+                                echo "<h5>Tổng số nhân viên: $totalEmployees</h5>"; // Hiển thị tổng số nhân viên
                             } else {
                                 echo "Không có dữ liệu người dùng.";
                             }
