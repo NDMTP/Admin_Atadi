@@ -19,20 +19,17 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Apps</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Người dùng</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="chat.html">Chat</a></li>
-                <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                <li><a class="nav-link" href="blog.html">Blog</a></li>
-                <li><a class="nav-link" href="calendar.html">Calendar</a></li>
+                <li><a class="nav-link" href="thongtinnhanvien.php">Nhân viên</a></li>
+                <li><a class="nav-link" href="portfolio.html">Khách hàng</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Email</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Cập nhật thông tin</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="email-inbox.html">Inbox</a></li>
-                <li><a class="nav-link" href="email-compose.html">Compose</a></li>
-                <li><a class="nav-link" href="email-read.html">read</a></li>
+                <li><a class="nav-link" href="capnhatnhanvien.php">Nhân viên</a></li>
+                <li><a class="nav-link" href="email-compose.html">Khách hàng</a></li>
               </ul>
             </li>
             <li class="menu-header">UI Elements</li>
