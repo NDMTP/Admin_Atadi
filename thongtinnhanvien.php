@@ -186,6 +186,7 @@
                                 <th>Email</th>
                                 <th>Tên</th>
                                 <th>Địa chỉ</th>
+                                <th>Số điện thoại</th>
                                 <th>Số lần mua hàng</th>
                             </tr>
                         </thead>
@@ -202,11 +203,15 @@
                                 die("Connection failed: " . $conn->connect_error);
                             }
 
-                            // Truy vấn SQL để lấy danh sách người dùng bao gồm số lần mua hàng
+
+                            // Truy vấn SQL để lấy danh sách người dùng bao gồm số lần mua hàng và lọc theo maquyen=2
                             $sql = "SELECT nguoidung.email, nguoidung.ten, nguoidung.diachi, nguoidung.sdt, COUNT(hoadon.mahoadon) AS solanmuahang
-                                    FROM nguoidung
+                                    FROM nguoidung 
                                     LEFT JOIN hoadon ON nguoidung.email = hoadon.email
+                                    WHERE nguoidung.phanquyen = 2
                                     GROUP BY nguoidung.email, nguoidung.ten, nguoidung.diachi, nguoidung.sdt";
+                            $result = $conn->query($sql);
+
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -215,6 +220,7 @@
                                             <td>" . $row["email"] . "</td>
                                             <td>" . $row["ten"] . "</td>
                                             <td>" . $row["diachi"] . "</td>
+                                            <td>" . $row["sdt"] . "</td>
                                             <td>" . $row["solanmuahang"] . "</td>
                                           </tr>";
                                 }
