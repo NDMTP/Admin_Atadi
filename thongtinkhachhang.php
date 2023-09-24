@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- email-inbox.html  21 Nov 2019 03:50:57 GMT -->
+<!-- chat.html  21 Nov 2019 03:50:11 GMT -->
 <?php
   include("connect.php");
   include('head.php');
@@ -173,100 +173,76 @@
         <section class="section">
           <div class="section-body">
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="card">
-                  <form method="POST" action="themnguoidung.php">
-                    <div class="card-header">
-                      <h4>Thêm người dùng</h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" id="ID" name="email" required="">
-                      </div>
-                      <div class="form-group">
-                        <label>Họ và tên</label>
-                        <input type="text" class="form-control" id="ho_ten" name="ho_ten" required="">
-                      </div>
-                      <div class="form-group">
-                        <label>Số điện thoại</label>
-                        <input type="text" id="so_dien_thoai" name="so_dien_thoai" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label>Địa chỉ</label>
-                        <input type="text" id="dia_chi" name="dia_chi" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label>Phân quyền giai cấp</label>
-                        <select class="form-control selectric" name="phanquyen">
-                        <option value="1">Admin</option>
-                        <option value="2">Nhân Viên</option>
-                        <option value="3">Khách Hàng</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary" class="mt-2">Thêm người dùng</button>
-                    </div>
-                  </form>
+            <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Danh sách khách hàng</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
+                        <tbody>
+                            <?php
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "qlbanmicay";
+
+                            // Tạo kết nối đến cơ sở dữ liệu
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+
+                            // Truy vấn SQL để lấy danh sách người dùng bao gồm số lần mua hàng và lọc theo maquyen=2
+                            $sql = "SELECT nguoidung.email, nguoidung.ten, nguoidung.diachi, nguoidung.sdt, COUNT(hoadon.mahoadon) AS solanmuahang
+                                    FROM nguoidung 
+                                    LEFT JOIN hoadon ON nguoidung.email = hoadon.email
+                                    WHERE nguoidung.phanquyen = 3
+                                    GROUP BY nguoidung.email, nguoidung.ten, nguoidung.diachi, nguoidung.sdt";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                echo '<table class="table table-striped table-hover" id="tableExport" style="width:100%;">';
+                                echo '<thead>';
+                                echo '<tr>';
+                                echo '<th>Email</th>';
+                                echo '<th>Tên</th>';
+                                echo '<th>Địa chỉ</th>';
+                                echo '<th>Số điện thoại</th>';
+                                echo '<th>Số lần mua hàng</th>';
+                                echo '</tr>';
+                                echo '</thead>';
+                                echo '<tbody>';
+                                
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr>
+                                            <td>" . $row["email"] . "</td>
+                                            <td>" . $row["ten"] . "</td>
+                                            <td>" . $row["diachi"] . "</td>
+                                            <td>" . $row["sdt"] . "</td>
+                                            <td>" . $row["solanmuahang"] . "</td>
+                                          </tr>";
+                                }
+
+                                echo '</tbody>';
+                                echo '</table>';
+                                
+                                $totalEmployees = $result->num_rows; // Đếm tổng số khách hàng
+                                echo "<h5>Tổng số khách hàng: $totalEmployees</h5>"; // Hiển thị tổng số khách hàng
+                            } else {
+                                echo "Không có dữ liệu người dùng.";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="card">
-                  <form method="POST" action="capnhatnguoidung.php">
-                    <div class="card-header">
-                      <h4>Cập nhật người dùng</h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" id="ID" name="email" required="">
-                      </div>
-                      <div class="form-group">
-                        <label>Họ và tên</label>
-                        <input type="text" class="form-control" id="ho_ten" name="ho_ten" required="">
-                      </div>
-                      <div class="form-group">
-                        <label>Số điện thoại</label>
-                        <input type="text" id="so_dien_thoai" name="so_dien_thoai" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label>Địa chỉ</label>
-                        <input type="text" id="dia_chi" name="dia_chi" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label>Phân quyền giai cấp</label>
-                        <select class="form-control selectric" name="phanquyen">
-                        <option value="1">Admin</option>
-                        <option value="2">Nhân Viên</option>
-                        <option value="3">Khách Hàng</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary" class="mt-2">Thêm người dùng</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="card">
-                <form method="POST" action="xoanguoidung.php">
-                    <div class="card-header">
-                      <h4>Xóa người dùng</h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" id="ID" name="email" required="">
-                      </div>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-danger">Xóa người dùng</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+            </div>
+        </div>
+    </div>
             </div>
           </div>
         </section>
@@ -375,6 +351,7 @@
   <script src="assets/js/app.min.js"></script>
   <!-- JS Libraies -->
   <!-- Page Specific JS File -->
+  <script src="assets/js/page/chat.js"></script>
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
   <!-- Custom JS File -->
@@ -382,5 +359,5 @@
 </body>
 
 
-<!-- email-inbox.html  21 Nov 2019 03:50:58 GMT -->
+<!-- chat.html  21 Nov 2019 03:50:12 GMT -->
 </html>
