@@ -177,7 +177,7 @@
                 <div class="card">
                   <form method="POST" action="themnguoidung.php">
                     <div class="card-header">
-                      <h4>Thêm nhân viên</h4>
+                      <h4>Thêm người dùng</h4>
                     </div>
                     <div class="card-body">
                       <div class="form-group">
@@ -213,52 +213,56 @@
               </div>
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
-                  <form>
+                  <form method="POST" action="capnhatnguoidung.php">
                     <div class="card-header">
-                      <h4>Cập nhật nhân viên</h4>
+                      <h4>Cập nhật người dùng</h4>
                     </div>
                     <div class="card-body">
                       <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" required="">
+                        <input type="email" class="form-control" id="ID" name="email" required="">
                       </div>
                       <div class="form-group">
                         <label>Họ và tên</label>
-                        <input type="text" class="form-control" required="">
+                        <input type="text" class="form-control" id="ho_ten" name="ho_ten" required="">
+                      </div>
+                      <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="text" id="so_dien_thoai" name="so_dien_thoai" class="form-control">
                       </div>
                       <div class="form-group">
                         <label>Địa chỉ</label>
-                        <input type="text" class="form-control">
+                        <input type="text" id="dia_chi" name="dia_chi" class="form-control">
                       </div>
                       <div class="form-group">
                         <label>Phân quyền giai cấp</label>
-                        <select class="form-control selectric">
-                          <option>ADMIN</option>
-                          <option>Nhân viên</option>
-                          <option>Khách hàng</option>
+                        <select class="form-control selectric" name="phanquyen">
+                        <option value="1">Admin</option>
+                        <option value="2">Nhân Viên</option>
+                        <option value="3">Khách Hàng</option>
                         </select>
                       </div>
                     </div>
                     <div class="card-footer text-right">
-                      <button class="btn btn-success">Lưu thay đổi</button>
+                      <button class="btn btn-primary" class="mt-2">Thêm người dùng</button>
                     </div>
                   </form>
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
-                  <form>
+                <form method="POST" action="xoanguoidung.php">
                     <div class="card-header">
-                      <h4>Xóa nhân viên</h4>
+                      <h4>Xóa người dùng</h4>
                     </div>
                     <div class="card-body">
                       <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" required="">
+                        <input type="email" class="form-control" id="ID" name="email" required="">
                       </div>
                     </div>
                     <div class="card-footer text-right">
-                      <button class="btn btn-danger">Xóa nhân viên</button>
+                      <button class="btn btn-danger">Xóa người dùng</button>
                     </div>
                   </form>
                 </div>
