@@ -12,10 +12,11 @@
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="briefcase"></i><span>Widgets</span></a>
+                  data-feather="briefcase"></i><span>Sản phẩm</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="widget-chart.html">Chart Widgets</a></li>
-                <li><a class="nav-link" href="widget-data.html">Data Widgets</a></li>
+                <li><a class="nav-link" href="products.php">Danh sách sản phẩm</a></li>
+                <li><a class="nav-link" href="products-add.php">Thêm sản phẩm</a></li>
+                <li><a class="nav-link" href="products-edit.php">Chỉnh sửa sản phẩm</a></li>
               </ul>
             </li>
             <li class="dropdown">
