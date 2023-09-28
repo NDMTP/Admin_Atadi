@@ -30,7 +30,7 @@
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Cập nhật thông tin</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="capnhat.php">Người dùng</a></li>
-                <li><a class="nav-link" href="email-compose.html">Sản phẩm</a></li>
+                <li><a class="nav-link" href="capnhatsp.php">Sản phẩm</a></li>
               </ul>
             </li>
             <li class="menu-header">UI Elements</li>
