@@ -25,34 +25,29 @@
             6 </span> </a>
         <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
             <div class="dropdown-header">
-            Messages
+            Tin nhắn 
             <div class="float-right">
-                <a href="#">Mark All As Read</a>
+                <a href="#">Đánh dấu tất cả đã đọc</a>
             </div>
             </div>
             <div class="dropdown-list-content dropdown-list-message">
             <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
-                                        text-white"> <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
-                </span> <span class="dropdown-item-desc"> <span class="message-user">John
-                    Deo</span>
-                <span class="time messege-text">Please check your mail !!</span>
-                <span class="time">2 Min Ago</span>
+                                        text-white"> <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                </span> <span class="dropdown-item-desc"> <span class="message-user">Duy Chủ Tịch</span>
+                <span class="time messege-text">Deadline lẹ coi!!!</span>
+                <span class="time">2 phút trước</span>
                 </span>
             </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                 <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
-                </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
-                    Smith</span> <span class="time messege-text">Request for leave
-                    application</span>
-                <span class="time">5 Min Ago</span>
+                </span> <span class="dropdown-item-desc"> <span class="message-user">Huỳnh Thị Mỹ Ái</span> <span class="time messege-text">Sao cái CSS t chỉnh hoài không được vậy mậy??</span>
+                <span class="time">5 phút trước</span>
                 </span>
             </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
                 <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
-                </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
-                    Ryan</span> <span class="time messege-text">Your payment invoice is
-                    generated.</span> <span class="time">12 Min Ago</span>
+                </span> <span class="dropdown-item-desc"> <span class="message-user">Nguyễn Đỗ Phúc Vinh</span> <span class="time messege-text">Cờ nè , code gì tầm này</span> <span class="time">12 phút trước</span>
                 </span>
             </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
                 </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
                     Smith</span> <span class="time messege-text">hii John, I have upload
                     doc
