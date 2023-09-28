@@ -22,7 +22,8 @@
         <section class="section">
           <div class="section-body">
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-6">
+              <div class="col-lg-3"></div>
+              <div class="col-6 col-md-6 col-lg-6">
                 <div class="card">
                   <form method="POST" action="themsanpham.php">
                     <div class="card-header">
@@ -30,24 +31,63 @@
                     </div>
                     <div class="card-body">
                       <div class="form-group">
-                        <label>Mã sản phẩm</label>
-                        <input type="text" class="form-control" id="ID" name="masp" required="">
-                      </div>
-                      <div class="form-group">
                         <label>Loại sản phẩm</label>
-                        <input type="text" class="form-control" id="maloai" name="maloai" required="">
+                        <select name="loai" id="" class="form-control">
+                          <?php
+                            $sql = "select * from loaisanpham";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                              $result = $conn->query($sql);
+                              $result_all = $result -> fetch_all(MYSQLI_ASSOC);
+                              foreach ($result_all as $row) {
+                                echo '<option value="'.$row['MALOAI'].'">'.$row['TENLOAI'].'</option>';
+                              }
+                            }
+                          ?>
+                        </select>
                       </div>
                       <div class="form-group">
                         <label>Tên sản phẩm</label>
                         <input type="text" class="form-control" id="tensp" name="tensp" >
                       </div>
                       <div class="form-group">
+                        <label>Size, Giá:</label>
+                          
+                        <div class="row">
+                          <div class="col-1"></div>
+                          <div class="col-5 price">
+                            Size M - <input type="text" name="M" id=""><br>
+                            Size L - <input type="text" name="L" id=""><br>
+                            Size XL - <input type="text" name="XL" id=""><br>
+                          </div>
+                          <div class="col-5 price">
+                            Size Vừa - <input type="text" name="Vừa" id=""><br>
+                            Size Lớn - <input type="text" name="Lớn" id=""><br>
+                            Size Combo - <input type="text" name="Combo" id=""><br>
+                          </div>
+                          <div class="col-1"></div>
+                          <style>
+                            .price{
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: space-between;
+                            }
+
+                            .price input{
+                              max-width: 8rem;
+                            }
+                          </style>
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label>Mô tả</label>
                         <input type="text" class="form-control" id="mota" name="mota" >
                       </div>
                       <div class="form-group">
-                        <label>Link ảnh sản phẩm</label>
-                        <input type="text" class="form-control" id="linkanh" name="linkanh">
+                        <label>Link ảnh sản phẩm</label><br>
+                        <div class="text-center">
+                          <input type="file" name="pdimg" id="">
+                        </div>
                       </div>
                     </div>
                     <div class="card-footer text-right">
@@ -56,58 +96,7 @@
                   </form>
                 </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-6">
-              <div class="card">
-                  <form method="POST" action="capnhatsanpham.php">
-                    <div class="card-header">
-                      <h4>Cập nhật sản phẩm</h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label>Mã sản phẩm</label>
-                        <input type="text" class="form-control" id="ID" name="masp" required="">
-                      </div>
-                      <div class="form-group">
-                        <label>Loại sản phẩm</label>
-                        <input type="text" class="form-control" id="maloai" name="maloai" required="">
-                      </div>
-                      <div class="form-group">
-                        <label>Tên sản phẩm</label>
-                        <input type="text" class="form-control" id="tensp" name="tensp" >
-                      </div>
-                      <div class="form-group">
-                        <label>Mô tả</label>
-                        <input type="text" class="form-control" id="mota" name="mota" >
-                      </div>
-                      <div class="form-group">
-                        <label>Link ảnh sản phẩm</label>
-                        <input type="text" class="form-control" id="linkanh" name="linkanh">
-                      </div>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-success" class="mt-2">Cập nhật sản phẩm</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="card">
-                <form method="POST" action="xoasanpham.php">
-                    <div class="card-header">
-                      <h4>Xóa sản phẩm</h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label>Mã Sản Phẩm</label>
-                        <input type="text" class="form-control" id="masp" name="masp" required="">
-                      </div>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-danger">Xóa sản phẩm</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <div class="col-lg-3"></div>
             </div>
           </div>
         </section>

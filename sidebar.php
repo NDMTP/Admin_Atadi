@@ -15,8 +15,8 @@
                   data-feather="briefcase"></i><span>Sản phẩm</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="danhsachsanpham.php">Danh sách sản phẩm</a></li>
-                <li><a class="nav-link" href="themsanpham.php">Thêm sản phẩm</a></li>
-                <li><a class="nav-link" href="chinhsuasanpham.php">Chỉnh sửa sản phẩm</a></li>
+                <li><a class="nav-link" href="sanpham_them.php">Thêm sản phẩm</a></li>
+                <li><a class="nav-link" href="capnhatsp.php">Sửa sản phẩm</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -27,10 +27,9 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Cập nhật thông tin</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Cập nhật người dùng</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="capnhat.php">Người dùng</a></li>
-                <li><a class="nav-link" href="capnhatsp.php">Sản phẩm</a></li>
               </ul>
             </li>
             <li class="menu-header">UI Elements</li>
