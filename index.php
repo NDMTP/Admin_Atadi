@@ -665,8 +665,8 @@
             </div>
           </div>
         </section>
-        <?php require 'settingSide.php' ?>
       </div>
+      <?php require 'settingSide.php' ?>
       <footer class="main-footer">
         <div class="footer-left">
           <a href="templateshub.net">Templateshub</a></a>
