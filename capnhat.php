@@ -214,29 +214,64 @@
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <form method="POST" action="capnhatnguoidung.php">
+                    <?php
+                      $email ="";
+                      $name = "";
+                      $sdt = "";
+                      $dc = "";
+                      $pq ="";
+                      if (isset($_POST['email'])){
+                        $sql = "select * from nguoidung where EMAIL = '{$_POST['email']}'";
+                        $rs = $conn->query($sql);
+                        $row = $rs->fetch_assoc();
+                        $email = "value=".$row['EMAIL']." readonly";
+                        $name = "value=".$row['TEN'];
+                        $sdt = "value=".$row['SDT'];
+                        $dc = "value=".$row['DIACHI'];
+                        $pq =$row['PHANQUYEN'];
+                      }
+                    ?>
                     <div class="card-header">
                       <h4>Cập nhật người dùng</h4>
                     </div>
                     <div class="card-body">
                       <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" id="ID" name="email" required="">
+                        <input type="email" class="form-control" id="ID" name="email" required <?php echo $email ?>>
                       </div>
                       <div class="form-group">
                         <label>Họ và tên</label>
-                        <input type="text" class="form-control" id="ho_ten" name="ho_ten" pattern="[A-Za-z\s]+" required="">
+                        <input type="text" class="form-control" id="ho_ten" name="ho_ten" required <?php echo $name ?>>
                       </div>
                       <div class="form-group">
                         <label>Số điện thoại</label>
-                        <input type="tel" class="form-control" id="so_dien_thoai" name="so_dien_thoai" pattern="\d+" required>
+                        <input type="tel" class="form-control" id="so_dien_thoai" name="so_dien_thoai" pattern="\d+" required <?php echo $sdt ?>>
                       </div>
                       <div class="form-group">
                         <label>Địa chỉ</label>
-                        <input type="text" class="form-control" id="dia_chi" name="dia_chi" required>
+                        <input type="text" class="form-control" id="dia_chi" name="dia_chi" required <?php echo $dc ?>>
                       </div>
                       <div class="form-group">
                         <label>Phân quyền giai cấp</label>
                         <select class="form-control selectric" name="phanquyen">
+                        <?php
+                          if ($pq!=""){
+                            switch ($pq) {
+                              case '1':
+                                $tpq = "Admin";
+                                break;
+
+                              case '2':
+                                $tpq = "Nhân viên";
+                                break;
+                              
+                              case '3':
+                                $tpq = "Khách hàng";
+                                break;
+                            }
+                          }
+                          echo '<option selected value="'.$pq.'">'.$tpq.'</option>';
+                        ?>
                         <option value="1">Admin</option>
                         <option value="2">Nhân Viên</option>
                         <option value="3">Khách Hàng</option>

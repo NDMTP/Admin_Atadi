@@ -34,8 +34,8 @@ if ($result->num_rows > 0) {
 if ( $result) {
   echo '<script language="javascript">
   alert("Thêm thành công!");
-  history.back();
     </script>';
+  header('Location: thongtinnhanvien.php');
 } else {
     echo "Thêm nhân viên thất bại: " . $conn->error;
 }
