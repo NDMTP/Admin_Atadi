@@ -15,15 +15,22 @@ if ($conn->connect_error) {
 $maloai = $_GET["loai"];
 $tensp = $_GET["tensp"];
 
+$sql = "SELECT max(CAST(SUBSTRING(MASP, 3) AS SIGNED)) AS maxid
+FROM sanpham
+WHERE MALOAI = '01' and MASP LIKE 'MC%'
+";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$maxid = $row['maxid']+1;
+
 $sql = "select max(MASP) as maxid from sanpham where MALOAI = '{$maloai}'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $id = $row['maxid'];
 preg_match("/([A-Za-z]+)([0-9]+)/", $id, $matches);
 $kytu = $matches[1];
-$so = strval($matches[2])+1;
 
-$nextid = $kytu.$so;
+$nextid = $kytu.$maxid;
 
 $motasp = $_GET["mota"];
 
