@@ -25,7 +25,7 @@
               <div class="col-lg-3"></div>
               <div class="col-6 col-md-6 col-lg-6">
                 <div class="card">
-                  <form method="POST" action="themsanpham.php">
+                  <form method="GET" action="themsanpham.php">
                     <div class="card-header">
                       <h4>Thêm sản phẩm</h4>
                     </div>
@@ -56,14 +56,14 @@
                         <div class="row">
                           <div class="col-1"></div>
                           <div class="col-5 price">
-                            Size M - <input type="text" name="M" id=""><br>
-                            Size L - <input type="text" name="L" id=""><br>
-                            Size XL - <input type="text" name="XL" id=""><br>
+                            Size M - <input type="number" min="0" step="1000" name="M" id="" value="0"><br>
+                            Size L - <input type="number" min="0" step="1000" name="L" id="" value="0"><br>
+                            Size XL - <input type="number" min="0" step="1000" name="XL" id="" value="0"><br>
                           </div>
                           <div class="col-5 price">
-                            Size Vừa - <input type="text" name="Vừa" id=""><br>
-                            Size Lớn - <input type="text" name="Lớn" id=""><br>
-                            Size Combo - <input type="text" name="Combo" id=""><br>
+                            Size Vừa - <input type="number" min="0" step="1000" name="Vừa" id="" value="0"><br>
+                            Size Lớn - <input type="number" min="0" step="1000" name="Lớn" id="" value="0"><br>
+                            Size Combo - <input type="number" min="0" step="1000" name="Combo" id="" value="0"><br>
                           </div>
                           <div class="col-1"></div>
                           <style>

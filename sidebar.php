@@ -16,7 +16,6 @@
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="danhsachsanpham.php">Danh sách sản phẩm</a></li>
                 <li><a class="nav-link" href="sanpham_them.php">Thêm sản phẩm</a></li>
-                <li><a class="nav-link" href="capnhatsp.php">Sửa sản phẩm</a></li>
               </ul>
             </li>
             <li class="dropdown">
