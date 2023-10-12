@@ -27,33 +27,13 @@
                 <div class="card">
                   <form method="GET" action="themsanpham.php">
                     <div class="card-header">
-                      <h4>Chỉnh sửa sản phẩm</h4>
+                      <h4>Thêm sản phẩm</h4>
                     </div>
                     <div class="card-body">
-                    <?php
-                        $giaM = 0;
-                        $giaL = 0;
-                        $giaXL = 0;
-                        $giaVua = 0;
-                        $giaLon = 0;
-                        $giaCombo = 0;
-                        $sql = "select * from sanpham sp
-                                join sizecuasanpham sz on sz.MASP=sp.MASP
-                                join loaisanpham l on l.MALOAI=sp.MALOAI
-                                where sp.MASP = '{$_GET['spid']}'";
-                        $result = $conn->query($sql);
-                        $sp = $result->fetch_all();
-                        foreach ($sp as $s => $value) {
-                            # code...
-                        }
-                    ?>
                       <div class="form-group">
                         <label>Loại sản phẩm</label>
                         <select name="loai" id="" class="form-control">
-                            <option value="<?php echo $sp['MALOAI'] ?>"><?php echo $sp['TENLOAI'] ?></option>
                           <?php
-
-
                             $sql = "select * from loaisanpham";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
@@ -68,11 +48,11 @@
                       </div>
                       <div class="form-group">
                         <label>Tên sản phẩm</label>
-                        <input type="text" class="form-control" id="tensp" name="tensp" value="<?php echo $sp['TENSP'] ?>">
+                        <input type="text" class="form-control" id="tensp" name="tensp" >
                       </div>
                       <div class="form-group">
                         <label>Size, Giá:</label>
-                          
+
                         <div class="row">
                           <div class="col-1"></div>
                           <div class="col-5 price">
@@ -101,7 +81,7 @@
                       </div>
                       <div class="form-group">
                         <label>Mô tả</label>
-                        <input type="text" class="form-control" id="mota" name="mota" value="<?php echo $sp['MOTA'] ?>">
+                        <input type="text" class="form-control" id="mota" name="mota" >
                       </div>
                       <div class="form-group">
                         <label>Link ảnh sản phẩm</label><br>
