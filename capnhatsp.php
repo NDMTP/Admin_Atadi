@@ -15,7 +15,13 @@
       <div class="navbar-bg"></div>
       <?php 
         include('navbar.php');
-        include('sidebar.php');
+        if($_SESSION['PHANQUYEN']=='Admin'){
+          include('sidebar.php');
+      }
+      if($_SESSION['PHANQUYEN']=='nhanvien'){
+          include('sidebar_nv.php');
+          
+      }
       ?>
       <!-- Main Content -->
       <div class="main-content">

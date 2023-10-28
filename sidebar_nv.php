@@ -15,9 +15,6 @@
                 <ul>
                     <li><a class="nav-link" href="danhsachsanpham.php">Danh sách sản phẩm</a></li>
                     <li><a class="nav-link" href="sanpham_them.php">Thêm sản phẩm</a></li>
-                    <li><a class="nav-link" href="danhsachsanpham.php">Danh sách loại sản phẩm</a></li>
-                    <li><a class="nav-link" href="sanpham_them.php">Thêm loại</a></li>
-                    <li><a class="nav-link" href="#">Cập nhật giảm giá</a></li>
                 </ul>
             </li>
             <li>
@@ -33,9 +30,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Quản lí người
                         dùng</span></a>
                 <ul>
-                    <li><a class="nav-link" href="thongtinnhanvien.php">Nhân viên</a></li>
                     <li><a class="nav-link" href="thongtinkhachhang.php">Khách hàng</a></li>
-                    <li><a class="nav-link" href="capnhat.php">Thêm nhân viên</a></li>
                 </ul>
             </li>
             <!-- hoadon -->

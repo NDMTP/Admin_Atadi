@@ -14,20 +14,17 @@ include("connect.php");
                         $_SESSION["password"]=$row["MATKHAU"];
                         $_SESSION["diachi"]=$row["DIACHI"];
                         $_SESSION["hoten"]=$row["TEN"];
+                        $_SESSION["PHANQUYEN"]=$row["PHANQUYEN"];
                         $fullname = explode(' ', $row['TEN']);
                         $lastname = end($fullname);
                         $_SESSION["lname"] = $lastname;
                         $_SESSION["sdt"]=$row["SDT"];
                         $_SESSION['slsp'] = 0;
-                   
-                        header('Location: index.php');
-                     
-/*
-                        echo $_SESSION["name"]."<br>==";
-                        echo $_SESSION["ngaysinh"]."<br>==";
-                        echo $_SESSION["sdt"];
                         
-    */ 
+                        header('Location: index.php');
+                        $_SESSION['ngaybd']=date('Y-m-d', strtotime('-1 month'));
+                        $_SESSION['ngaykt']= date('Y-m-d');
+                    
                     }
                     else{
                  
