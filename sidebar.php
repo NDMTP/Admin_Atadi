@@ -15,8 +15,8 @@
                 <ul>
                     <li><a class="nav-link" href="danhsachsanpham.php">Danh sách sản phẩm</a></li>
                     <li><a class="nav-link" href="sanpham_them.php">Thêm sản phẩm</a></li>
-                    <li><a class="nav-link" href="danhsachsanpham.php">Danh sách loại sản phẩm</a></li>
-                    <li><a class="nav-link" href="sanpham_them.php">Thêm loại</a></li>
+                    <li><a class="nav-link" href="loaisp.php">Danh sách loại sản phẩm</a></li>
+                    <li><a class="nav-link" href="loaisp_them.php">Thêm loại</a></li>
                     <li><a class="nav-link" href="#">Cập nhật giảm giá</a></li>
                 </ul>
             </li>
